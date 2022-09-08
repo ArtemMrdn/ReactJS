@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Hello World</title>
+    <title>JSX Hello World</title>
   </head>
   <body>
     <div id="app"></div>
+    <!-- React link -->
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
     ></script>
+    <!-- ReactDOM link -->
     <script
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
     ></script>
-    <script>
-      const helloWorldHEading = React.createElement(
-        "h1",
-        null,
-        "Hello from React"
-      );
+    <!-- Babel link -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      const helloWorldHEading = <h1>Hello from React</h1>;
       const container = document.getElementById("app"); //Нашли HTML элемент с id 'app', присвоили переменной container
       const root = ReactDOM.createRoot(container); //Передали container в вызов метода createRoot, который является методом обьекта ReactDOM
       root.render(helloWorldHEading); //Вызываем метод render обьекта root, и ему передаем определнный элемент React
