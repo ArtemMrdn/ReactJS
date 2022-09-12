@@ -1,9 +1,9 @@
-const App = () => {
+const App = ({ initialButtonText, initialClassesList }) => {
   //Функциональный компонент
-  const [buttonText, setButtonText] = React.useState("Click me"); //Метод возвращает массив из двух элементов, первый это значение для определенной переменной,
+  const [buttonText, setButtonText] = React.useState(initialButtonText); //Метод возвращает массив из двух элементов, первый это значение для определенной переменной,
   const [classesList, setClassesList] =
     React.useState(
-      ""
+      initialClassesList
     ); /*причем начальное значение мы передаем в вызове метода useState, а второе это функция, 
     которая вызвана тогда когда мы хотим поменять значение соответствующей переменной*/
 
@@ -25,4 +25,4 @@ const App = () => {
 const helloWorldHEading = <h1>Hello from React</h1>;
 const container = document.getElementById("app");
 const root = ReactDOM.createRoot(container);
-root.render(<App />);
+root.render(<App initialButtonText="Click me please" initialClassesList="" />);
