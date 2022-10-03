@@ -7,6 +7,7 @@ function TodoForm({ addTodo }) {
     addTodo(text);
     setText("");
   };
+
   return (
     <form onSubmit={onSubmitHandler}>
       <input
