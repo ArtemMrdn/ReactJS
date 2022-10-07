@@ -2,7 +2,7 @@ import { RiDeleteBin2Line, RiTodoFill } from "react-icons/ri";
 import { FaCheck } from "react-icons/fa";
 import styles from "./Todo.module.css";
 
-function Todo({ todo, deleteTodo, index }) {
+function Todo({ todo, deleteTodo, toggleTodo }) {
   return (
     <div className={styles.todo}>
       <RiTodoFill className={styles.todoIcon} />
@@ -11,7 +11,10 @@ function Todo({ todo, deleteTodo, index }) {
         className={styles.deleteIcon}
         onClick={() => deleteTodo(todo.id)}
       />
-      <FaCheck className={styles.checkIcon} />
+      <FaCheck
+        className={styles.checkIcon}
+        onClick={() => toggleTodo(todo.id)}
+      />
     </div>
   );
 }
