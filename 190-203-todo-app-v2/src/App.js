@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} />
-      {!!todos.length && (
+      {!!todos.length && ( // Скрытие кнопок если нет задач
         <TodosActions
           resetTodos={resetTodosHandler}
           deleteCompletedTodos={deleteCompletedTodosHandler}
